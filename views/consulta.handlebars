@@ -1,0 +1,31 @@
+          <div class="container">
+        <h1>Tela de Consulta</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+                {{#each post}} 
+                {{#dataValues}}
+                <div class="row"> 
+                    <div class="col">
+                        {{nome}}
+                    </div>yy
+                    <div class="col">
+                        {{endereco}}
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-primary"><a href="/editar/{{id}}"
+                                style="color:inherit">Editar</a></button>
+                        <button type="button" class="btn btn-primary"><a href="/excluir/{{id}}"
+                                style="color:inherit">Excluir</a></button>
+                    </div>
+                </div>
+                {{/dataValues}} 
+                {{/each}} 
+            </div>
